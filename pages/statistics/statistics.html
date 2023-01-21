@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../../content.css">
+    <title>Statistics</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="burger-block">
+                <img class="icon burger" src="./../../src/img/icons/nav_menu.png" alt="" srcset="">
+            </div>
+            <div class="header-logo">Statistics</div>
+        </header>
+        <main>
+            <div class="sidebar-menu">
+                <nav id="menu">
+                    <ul>
+                        <a href="../../index.html">
+                            <li id="li_home">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_home.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Home</div>   
+                            </li>
+                        </a>
+                        <a href="../books/books.html">
+                            <li id="li_books">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_books.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Books</div>
+                            </li>
+                        </a>
+                        <a href="../visitors/visitors.html">
+                            <li id="li_visitors">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_visitors.png" alt="" srcset=""> 
+                                </div> 
+                                <div class="text">Visitors</div>
+                            </li>
+                        </a>
+                        <a href="../cards/cards.html">
+                            <li id="li_cards">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_cards.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Cards</div>
+                            </li>
+                        </a>
+                        <a href="../statistics/statistics.html">
+                            <li id="li_statistics" class="active">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_stat.png" alt="" srcset="">  
+                                </div>
+                                <div class="text">Statistics</div>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="content">
+                <div class="content-container content-container-stat">
+                    <div class="content-title">
+                        <div class="block">
+                            <h2>Top Books:</h2>   
+                        </div>
+                    </div>
+                    <div class="table-section table-section-books">
+                        <table> 
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                </tr>
+                            </thead>
+                            <tbody class="data" id="stat-books"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="content-container content-container-stat">
+                    <div class="content-title">
+                        <div class="block">
+                            <h2>Top Visitors:</h2>   
+                        </div>
+                    </div>
+                    <div class="table-section table-visitors">
+                        <table> 
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                </tr>
+                            </thead>
+                            <tbody class="data" id="stat-visitors"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../script.js"></script>
+    <script src="statistics.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../../content.css">
+    <title>Cards</title>
+</head>
+<body>
+    <div class="modal-background">
+        <div class="modal">
+            <div class="modal-close"><img id="close_modal" src="./../../src/img/icons/act_close.png" alt="" srcset=""></div>
+            <form id="card_form">
+                <h1 class="title">Visitor:</h1>
+                <input type="hidden" id="card_id" name="id">
+                <div class="field">
+                    <label for="visitor">Visitor:</label>
+                    <select name="visitor" id="visitor" class="inp-field">
+                        <option value="def" selected>-</option>
+                        <optgroup id="visitor_select"></optgroup>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="book">Book:</label>
+                    <select name="book" id="book" class="inp-field">
+                        <option value="def" selected>-</option>
+                        <optgroup id="book_select"></optgroup>
+                    </select>
+                </div>
+
+                <button class="btn" id="save_btn">Save</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="burger-block">
+                <img class="icon burger" src="./../../src/img/icons/nav_menu.png" alt="" srcset="">
+            </div>
+            <div class="header-logo">Cards</div>
+            <button class="btn" id="add_btn" onclick="toggleModal(event)">+ add new card</button>
+        </header>
+        <main>
+            <div class="sidebar-menu">
+                <nav id="menu">
+                    <ul>
+                        <a href="../../index.html">
+                            <li id="li_home">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_home.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Home</div>   
+                            </li>
+                        </a>
+                        <a href="../books/books.html">
+                            <li id="li_books">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_books.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Books</div>
+                            </li>
+                        </a>
+                        <a href="../visitors/visitors.html">
+                            <li id="li_visitors">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_visitors.png" alt="" srcset="">
+                                 </div> 
+                                 <div class="text">Visitors</div>
+                            </li>
+                        </a>
+                        <a href="../cards/cards.html">
+                            <li id="li_cards" class="active">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_cards.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Cards</div>
+                            </li>
+                        </a>
+                        <a href="../statistics/statistics.html">
+                            <li id="li_statistics">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_stat.png" alt="" srcset=""> 
+                                </div>
+                                <div class="text">Statistics</div>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content">
+                <div class="content-container">
+                    <div class="content-title">
+                        <div class="block">
+                            <label for="sort">Sort by:</label>
+                            <select class="inp-field" id="sort">
+                                <option value="id">id</option>
+                                <option value="visitor">visitor</option>
+                                <option value="book">book</option>
+                                <option value="return_date">return date</option>
+                            </select>
+                            <button class="btn" id="sort_btn">
+                                sort
+                            </button>
+                        </div>
+                        <div class="block">
+                            <label for="search">Search:</label>
+                            <input type="text" class="inp-field" id="search">
+                            <button class="btn" id="search_btn">search</button>
+                        </div>
+                    </div>
+                    <div class="table-section">
+                        <table> 
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Visitor</th>
+                                    <th>Book</th>
+                                    <th class="cell_center">Borrow Date</th>
+                                    <th class="cell_center">Return Date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="data" id="cards"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../script.js"></script>
+    <script src="cards.js" type="module"></script>
+</body>
+</html>

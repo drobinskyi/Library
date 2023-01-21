@@ -1,0 +1,186 @@
+.content{
+    width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+    padding-left: 60px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-container{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: grid; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+    grid-template-columns:  repeat(6, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    
+    
+    grid-template-areas: 
+        "books books books books statisctics statisctics"
+        "books books books books statisctics statisctics"
+        "visitors visitors visitors cards cards cards"
+        "visitors visitors visitors cards cards cards"; 
+}
+
+.grid-container .block{
+    width: 95%;
+    height: 95%;
+    font-size: 60px;
+    border: 1px solid #232323;
+    border-radius: 3px;
+    color: #232323;
+    font-weight: 500;
+    transition: .1s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    opacity: .5;
+}
+
+.block:hover .link_block{
+    font-size: 75px;
+    opacity: .8;
+}
+
+.link_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #232323;
+    transition: .1s linear;
+    width: 100%;
+    height: 100%;
+}
+
+#box-books { 
+    grid-area: books; 
+    background-image: url(src/img/backgrounds/main-books.jpg);
+}
+#box-visitors { 
+    grid-area: visitors;
+    background-image: url(src/img/backgrounds/main-visitors.jpg);
+}
+#box-cards { 
+    grid-area: cards; 
+    background-image: url(src/img/backgrounds/main-cards.jpg);
+}
+#box-statisctics { 
+    grid-area: statisctics; 
+    background-image: url(src/img/backgrounds/main-stat.jpg);
+}
+
+
+.content-container{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.content-container-stat{
+    flex-basis: 50%;
+}
+
+.filter-block{
+    width: 100%;
+    height: 100px;
+}
+
+.table-section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 180px);
+    padding-top: 20px;
+    overflow-y: scroll;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0px 10px;
+    position: relative;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #ccc;
+}
+  
+
+table thead tr{ 
+    color: #232323;
+}
+
+th{
+    font-size: 18px;
+}
+
+th, td{
+    padding: 7px 30px;
+    text-align: left;
+}
+
+thead tr:hover{
+    background-color: #ffffff;
+}
+
+tr:hover{
+    background-color: #e9e9e9;
+}
+
+.edit_item, .delete_item{
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    transition: .2s linear;
+}
+
+.table_icon{
+    width: 25px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.cell_center{
+    text-align: center;
+}
+
+.data{
+    overflow: hidden;
+    
+}
+
+.data tr{
+    box-shadow: 0px 3px 5px -4px #000;
+    margin-top: 10px;   
+    transition: .5s ease;
+}
+
+.data tr:hover{
+    cursor: pointer;
+}
+
+.data tr td{
+    padding: 15px 30px;
+    color: #3d3d3d;
+}
+
+.place1{
+    background-color: rgb(255, 234, 112);
+}
+
+.place2{
+    background-color: rgb(206, 206, 206);
+}
+
+.place3{
+    background-color: rgb(255, 207, 145);
+}

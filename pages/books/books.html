@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../../content.css">
+    <title>Books</title>
+</head>
+<body>
+    <div class="modal-background">
+        <div class="modal" >
+            <div class="modal-close">
+                <img id="close_modal" src="./../../src/img/icons/act_close.png" alt="" srcset="">
+            </div>
+            <form id="book_form">
+                <h1 class="title">Book:</h1>
+                <input type="hidden" id="book_id" name="id">
+                <div class="field">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" class="inp-field" required>
+                </div>
+                <div class="field">
+                    <label for="author">Author:</label>
+                    <input type="text" name="author" id="author" class="inp-field" required>
+                </div>
+                <div class="field">
+                    <label for="year">Year:</label>
+                    <input type="number" name="year" id="year" class="inp-field" min="0" required>
+                </div>
+                <div class="field">
+                    <label for="publisher">Publisher:</label>
+                    <input type="text" name="publisher" id="publisher" class="inp-field" required>
+                </div>
+                <div class="field">
+                    <label for="pages">Pages:</label>
+                    <input type="number" name="pages" id="pages" class="inp-field" min="0" required>
+                </div>
+                <div class="field">
+                    <label for="count">Count:</label>
+                    <input type="number" name="count" id="count" class="inp-field" min="0" required>
+                </div>
+
+                <button class="btn" id="save_btn">Save</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="burger-block">
+                <img class="icon burger" src="./../../src/img/icons/nav_menu.png" alt="" srcset="">
+            </div>
+            <div class="header-logo">Books</div>
+            <button class="btn" id="add_btn" onclick="toggleModal(event)">+ add new book</button>
+        </header>
+        <main>
+            <div class="sidebar-menu">
+                <nav id="menu">
+                    <ul>
+                        <a href="../../index.html">
+                            <li id="li_home">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_home.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Home</div>   
+                            </li>
+                        </a>
+                        <a href="../books/books.html">
+                            <li id="li_books" class="active">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_books.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Books</div>
+                            </li>
+                        </a>
+                        <a href="../visitors/visitors.html">
+                            <li id="li_visitors">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_visitors.png" alt="" srcset=""> 
+                                </div> 
+                                <div class="text">Visitors</div>
+                            </li>
+                        </a>
+                        <a href="../cards/cards.html">
+                            <li id="li_cards">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_cards.png" alt="" srcset="">
+                                </div>
+                                <div class="text">Cards</div>
+                            </li>
+                        </a>
+                        <a href="../statistics/statistics.html">
+                            <li id="li_statistics">
+                                <div class="logo">
+                                    <img class="menu-icon" src="./../../src/img/icons/nav_stat.png" alt="" srcset="">  
+                                </div>
+                                <div class="text">Statistics</div>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content">
+                <div class="content-container">
+                    <div class="content-title">
+                        <div class="block">
+                            <label for="sort">Sort by:</label>
+                            <select class="inp-field" id="sort">
+                                <option value="id">id</option>
+                                <option value="name">name</option>
+                                <option value="author">author</option>
+                                <option value="count">count</option>
+                            </select>
+                            <button class="btn" id="sort_btn">
+                                sort
+                            </button>
+                        </div>
+                        <div class="block">
+                            <label for="search">Search:</label>
+                            <input type="text" class="inp-field" id="search">
+                            <button class="btn" id="search_btn">search</button>
+                        </div>
+                    </div>
+                    <div class="table-section">
+                        <table> 
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Author</th>
+                                    <th>Year</th>
+                                    <th>Publisher</th>
+                                    <th>Pages</th>
+                                    <th>Count</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="data" id="books"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../script.js"></script>
+    <script src="books.js" type="module"></script>
+</body>
+</html>
